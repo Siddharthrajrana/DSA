@@ -64,21 +64,23 @@ void preOrder(node *root)
 }
 node *search(node *root, int key)
 {
-    if (root==NULL)  return NULL;
-    if (root->data==key)  return root;
-    if (root->data>key) return search(root->left,key);
-    else return search(root->right,key);
-
+    if (root == NULL)
+        return NULL;
+    if (root->data == key)
+        return root;
+    if (root->data > key)
+        return search(root->left, key);
+    else
+        return search(root->right, key);
 }
 node *inorderSccc(node *root)
 {
     node *curr = root;
-    while(curr && curr->left !=NULL)
+    while (curr && curr->left != NULL)
     {
-        curr=curr->left;
+        curr = curr->left;
     }
 }
-
 
 int main()
 {
@@ -120,18 +122,19 @@ int main()
             break;
 
         case 6:
-            cout<<"Enter the value to search : ";
-            cin>>data;
-            if(search(root,data)==NULL) cout<<"Key not found ";
-            else cout<<"Key found ";
+            cout << "Enter the value to search : ";
+            cin >> data;
+            if (search(root, data) == NULL)
+                cout << "Key not found ";
+            else
+                cout << "Key found ";
             break;
 
         case 7:
-            cout<<"Enter the value to delete : ";
-            cin>>data;
-           // deleteNode(root,data); 
+            cout << "Enter the value to delete : ";
+            cin >> data;
+            // deleteNode(root,data);
             break;
-            
 
         default:
             cout << "Please Enter the valid choice";
