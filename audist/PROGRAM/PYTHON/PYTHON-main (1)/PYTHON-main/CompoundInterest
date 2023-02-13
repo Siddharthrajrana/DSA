@@ -1,0 +1,6 @@
+P = float(input("Enter the principal amount: "))
+r= float(input("Enter the rate for compound interest: "))
+tp = float(input("Enter the time period for which principal is invested: "))
+TotalAmount = P * (pow ((1 + r / 100), tp))
+C = TotalAmount - P
+print("compound Interest",C)

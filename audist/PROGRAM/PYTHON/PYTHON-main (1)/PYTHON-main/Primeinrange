@@ -1,0 +1,9 @@
+n=int(input("Enter a first number"))
+l=int(input("Enter a last  number"))
+
+for num in range(n,l):
+    for i in range(2, num):
+        if (num % i) == 0:
+            break
+    else:
+        print(num,end=" ")
